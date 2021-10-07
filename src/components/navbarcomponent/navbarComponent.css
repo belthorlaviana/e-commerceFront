@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .logo {
+    width: 100px;
+    object-fit: contain;
+    margin: 18px 20px 0 20px;
+  }
+
+  #buscador{
+    width: 70%;
+  }
+
+  #spacer {
+    flex: 1;/*gracies a esto coloca  cada elemento a cada extremo de la pantalla metiendo un div (spacer) en blanco pol medio*/
+  }
+  #searchbtn{
+    /*meto esto pa redondear o no les esquines del boton*/
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 0px;
+    background-color: rgb(248, 187, 34);
+    border-color:  rgb(248, 187, 34);
+    color: black;
+  }
+
+
+
+
+  nav {  
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .options {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .option_upper {
+    font-size: 10px;
+  }
+  .option_lower {
+    font-size: 13px;
+    font-weight: 800;
+  }
+  
+  

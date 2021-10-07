@@ -1,0 +1,4 @@
+{
+    "GET_PRODUCTO": "http://localhost:8085/productos/getProducto",
+    "GET_ALL_PRODUCTOS": "http://localhost:8085/productos/getAllProductos"
+    }
