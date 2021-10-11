@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import PrincipalPageComponent from './components/principalpagecomponent/principalPageComponent'
+import PrincipalPageComponent from './components/principalPageComponent/principalPageComponent'
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,0 +1,11 @@
+//todo esto ejecutose en npm en la consola
+
+npm i --save axios
+npm install react-bootstrap bootstrap
+npm install @material-ui/core
+
+
+
+
+npm i @material-ui/icons
+npm install @material-ui/core@next @emotion/react @emotion/styled //esti instala coses deprecated
