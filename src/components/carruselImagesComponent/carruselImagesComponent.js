@@ -1,58 +1,57 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Carousel,useState} from 'react';
+import { useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
+const listaImagenes = require.context('./../../assets/carrousel', true)
 
 
 
 
-function CarruselImagesComponent() {
 
-    const [index, setIndex] = useState(0);
+const CarruselImagesComponent= () => {
 
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex);
+    const findImage = (id) => {
+        try {
+            return listaImagenes(`./${id}.jpg`).default
 
-
-        return (
-            <Carousel activeIndex={index} onSelect={handleSelect}>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
-                        alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=Third slide&bg=20232a"
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
-        );
+        } catch (error) {
+            return ""; //por si no existe una imagen en recursos, para el id de producto, sin esto salta error
+        }
     }
 
-} export default CarruselImagesComponent;
+
+    return (
+        <div style={{ padding: '30px', height: '10px' }}>
+            <Carousel
+                variant="dark"
+                //controls={false} 
+                interval={4000}
+                nextIcon={<span aria-hidden="true" className="carousel-control-next-icon" />}
+                nextLabel={""}//pa quitar la palabra next del carrousel
+                prevLabel={""}//pa quitar la palabra previus del carrousel
+            >
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={findImage("carrousel_001")}
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={findImage("carrousel_002")}
+                    />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100"
+                        src={findImage("carrousel_003")}
+                    />
+                </Carousel.Item>
+            </Carousel>
+        </div >
+
+    );
+}
+export default CarruselImagesComponent;
+
+

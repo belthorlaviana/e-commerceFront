@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useState, useEffect } from 'react';
-
 import ProductCardComponent from '../productCardComponent/ProductCardComponent';
 import { padding } from '@material-ui/system';
-
 const listaImagenes = require.context('./../../assets/products')
+
+
 
 
 

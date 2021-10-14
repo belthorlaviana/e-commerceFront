@@ -1,7 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Navbar, Container, Nav } from 'react-bootstrap';
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 
 import NavbarComponent from '../navbarComponent/navbarComponent';
 import TablaProductsComponent from '../productTableComponent/productTableComponent';
@@ -9,7 +7,6 @@ import CarruselImagesComponent from '../carruselImagesComponent/carruselImagesCo
 
 import { httpGet } from '../../http/httpOperations'
 import endpoints from '../../http/endpoints.json'
-import { padding } from '@material-ui/system';
 
 
 const PrincipalPageComponent = (props) => {
