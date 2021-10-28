@@ -11,15 +11,6 @@ const listaImagenes = require.context('./../../assets/products')
 
 const TablaProductsComponent = ({ productList }) => {
 
-    const findImage = (id) => {
-        try {
-            return listaImagenes(`./${id}.jpg`).default
-
-        } catch (error) {
-            return ""; //por si no existe una imagen en recursos, para el id de producto, sin esto salta error
-        }
-    }
-
     return (
         <div id="contenedor_principal_tabla" style={{padding:'30px'}}>
             <div className="card-columns">
@@ -32,7 +23,6 @@ const TablaProductsComponent = ({ productList }) => {
                 </div>
             </div>
         </div>
-
     );
 }
 

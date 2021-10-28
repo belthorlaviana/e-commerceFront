@@ -29,13 +29,11 @@ const PrincipalPageComponent = (props) => {
     return (
         <>
             <NavbarComponent setProductList={setProductList} />
-            <CarruselImagesComponent/>
-
-
-
+            <TablaProductsComponent productList={productList} />
         </>
     );
 }
 export default PrincipalPageComponent;
 
 //            <TablaProductsComponent productList={productList} />
+//     <CarruselImagesComponent/>
